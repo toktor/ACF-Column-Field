@@ -21,14 +21,37 @@
 	});
 	
 	acf.add_action('ready append', function( $el ){
-	 	
+
+	 	var acf_settings_cols = acf.model.extend({
+	 		
+	 		actions: {
+	 			'open_field':			'render',
+	 			'change_field_type':	'render'
+	 		},
+	 				
+	 		render: function( $el ){
+	 			
+	 			// bail early if not correct field type
+	 			if( $el.attr('data-type') != 'column' ) {
+	 				
+	 				return;
+	 				
+	 			}
+	 		 			
+	 			// clear name
+	 			$el.find('.acf-field[data-name="name"] input').val('').trigger('change');
+	 			
+	 		}		
+	 		
+	 	});
+		
 		var count = 'first';
 		
 		// search $el for fields of type 'column'
 		acf.get_fields({ type : 'column'}, $el).each(function(e, postbox) {
 
-			var columns = $(postbox).find('.acf-column').data('column'),
-				orig_key = $(postbox).find('.acf-column').data('id'),
+			var columns = $(postbox).find('.acf-column[class*="column-layout"]').data('column'),
+				orig_key = $(postbox).find('.acf-column[class*="column-layout"]').data('id'),
 				key = "acf-" + orig_key.replace("_", "-"),
 				colClass = '',
 				is_collapse_field = '';

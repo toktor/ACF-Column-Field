@@ -5,6 +5,17 @@
 	box-sizing: border-box;
 }
 
+.acf-field-object-column tr[data-name="name"],
+.acf-field-object-column tr[data-name="instructions"],
+.acf-field-object-column tr[data-name="required"],
+.acf-field-object-column tr[data-name="conditional_logic"],
+.acf-field-object-column tr[data-name="wrapper"] {
+	display: none !important;
+}
+.acf-field-object-column .li-field-name {
+	visibility: hidden;
+}
+
 .acf-postbox.seamless > .inside > .acf-field.acf-field-columngroup[class*="column-layout"] {
 	padding: 15px 0 15px 30px;
 }

@@ -146,6 +146,13 @@ class acf_field_column extends acf_field {
 		/*
 		*  Create a simple text input using the 'font_size' setting.
 		*/
+		$atts = array(
+			'class'				=> 'acf-column'
+		);
+		
+		?>
+		<div <?php acf_esc_attr_e( $atts ); ?>><?php echo $field['label']; ?></div>
+		<?php
 		
 		echo '<div class="acf-column column-layout-' . $field['column-type'] . '" data-id="' . $field['key'] . '" data-column="' . $field['column-type'] . '">&nbsp;</div>';
 		?>
