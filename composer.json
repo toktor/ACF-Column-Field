@@ -1,0 +1,17 @@
+{
+    "name": "tmconnect/acf-column-field",
+    "description": "Advanced Custom Fields plugin: Column Field",
+    "keywords": ["wordpress", "plugin"],
+    "type": "wordpress-plugin",
+    "homepage": "https://github.com/tmconnect/ACF-Column-Field",
+    "authors": [
+        {
+            "name": "Thomas Meyer",
+            "homepage": "www.dreihochzwo.de"
+        }
+     ],
+    "license": "GPLv2 or later",
+    "require": {
+    "composer/installers": "v1.0.7"
+    }
+}
