@@ -1,6 +1,6 @@
 {
     "name": "tmconnect/acf-column-field",
-    "description": "Advanced Custom Fields plugin: Column Field",
+    "description": "Adds an Advanced Custom Field field to arrange ACF fields into columns. This plugin needs the installation/activation of Advanced Custom Fields V5.",
     "keywords": ["wordpress", "plugin"],
     "type": "wordpress-plugin",
     "homepage": "https://github.com/tmconnect/ACF-Column-Field",
